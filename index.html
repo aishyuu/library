@@ -12,20 +12,33 @@
         <h1 class="textHeader">Library</h1>
     </div>
     <div class="containerAddBook">
-        <button class="buttonAddBook">+ Add Book</button>
+        <button onclick="" class="buttonAddBook">+ Add Book</button>
     </div>
     <div class="containerBookGrid">
-        <div class="containerBook">
-            <h1>"a"</h1>
-            <h1>a</h1>
-            <h1>1</h1>
-            <button onclick="changeStatus(event)" class="bookButton notFinished">Not Finished</button>
-            <button class="bookButton buttonRemove">Remove</button>
-        </div>
+        
     </div>
     <footer>
         <h2 class="textFooter"><a target="_blank" href="https://github.com/aishyuu/library">Made by Aishyuu</a></h2>
     </footer>
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modalContent">
+            <span class="close">&times;</span>
+            <form action="#" class="formAddBook">
+                <label for="title">Title</label>
+                <input class="modalInput" type="text" name="title" id="title">
+                <label for="author">Author</label>
+                <input class="modalInput" type="text" name="author" id="author">
+                <label for="pages">Pages</label>
+                <input class="modalInput" type="number" name="pages" id="pages">
+                <div class="containerReadIt">
+                    <label for="readIt">Have you read it?</label>
+                    <input class="modalInput" type="checkbox" name="readIt" id="readIt">
+                </div>
+                <input class="modalSubmit modalInput" type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>
