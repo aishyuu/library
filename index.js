@@ -12,14 +12,15 @@ checkBox.addEventListener("click", function(event) {
     const title = modalInputs[0].value;
     const author = modalInputs[1].value;
     const pages = modalInputs[2].value;
-    console.log(pages);
     const read = modalInputs[3].checked;
     const newBook = new Book(title, author, pages, read);
-    console.log(newBook);
     myLibrary[myLibrary.length] = newBook;
     modalAll.style.display = "none";
     removeAllChildNodes(document.querySelector(".containerBookGrid"));
-    renderAll(); 
+    renderAll();
+    modalInputs[0].value = "";
+    modalInputs[1].value = "";
+    modalInputs[2].value = "";
 })
 
 function removeAllChildNodes(parent) {
